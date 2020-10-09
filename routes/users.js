@@ -12,7 +12,6 @@ router.get('/', function (req, res, next) {
 router.post('/login', function (req, res, next) {
   let loginForm = req.body
   userDao.login(loginForm, function (users) {
-    console.log(result)
     res.send(result.createResult('post', true, users))
   })
 })
